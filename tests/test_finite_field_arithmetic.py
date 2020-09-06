@@ -7,8 +7,8 @@ def test_add():
 def test_xtime():
     assert ff.xtime(0x57) == hex(0xae)
     assert ff.xtime( 0xae) == hex(0x47)
-    # assert ff.xtime(0x47) == hex(0x8e)
-    # assert ff.xtime(0x8e) == hex(0x07)
+    assert ff.xtime(0x47) == hex(0x8e)
+    assert ff.xtime(0x8e) == hex(0x07)
 
 
 def test_ff_multiply():

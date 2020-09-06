@@ -21,8 +21,11 @@ class ByteUtils:
         print("BITCOUNT: {}".format(count))
         return count
 
-    def getMSBOf(self, n):
+    def getMSBOfN(self, n):
         msb = (2 ** int(math.log(n, 2)))
         # print("MSB of {} is {}".format(bin(n), msb))
         return msb
+
+    def clearKBitOfN(self, k, n):
+        return (n & (~(1 << (k - 1))))
 
