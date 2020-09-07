@@ -1,7 +1,7 @@
 class AESKeyExpansion:
 
-    def subWord(self):
+    def sub_word(self):
         pass
 
-    def rotWord(self):
+    def rot_word(self):
         pass
