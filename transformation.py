@@ -1,21 +1,21 @@
 class AESTransform:
-    def subBytes(self):
+    def sub_bytes(self):
         pass
 
-    def shiftRows(self):
+    def shift_rows(self):
         pass
 
-    def mixColumns(self):
+    def mix_columns(self):
         pass
 
-    def addRoundKey(self):
+    def add_round_key(self):
         pass
 
-    def invSubBytes(self):
+    def inv_sub_bytes(self):
         pass
 
-    def invShiftRows(self):
+    def inv_shift_rows(self):
         pass
 
-    def invMixColumns(self):
+    def inv_mix_columns(self):
         pass
