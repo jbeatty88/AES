@@ -16,5 +16,5 @@ class AESFiniteField:
             p1 = p ^ 0x1b  # Reduce by XOR the polynomial m(x) = x^8 + x^4 + x^3 + x + 1
             return hex(bu.clearKBitOfN(9, p1))  # Drop the 9th bit and return
 
-    def ffMultiply(self, m1, m2):
+    def multiply(self, m1, m2):
         return m1 * m2

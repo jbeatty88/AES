@@ -12,4 +12,4 @@ def test_xtime():
 
 
 def test_ff_multiply():
-    assert ff.ffMultiply(5, 5) == 25
+    assert ff.multiply(5, 5) == 25
