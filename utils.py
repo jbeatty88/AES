@@ -6,14 +6,14 @@ class ArithmeticUtils:
         # Input: Two positive integers a >= b >= 0
         # Output: Integers x, y, d st. d = gcd(a, b) and ax + by = d
         if b == 0:
-            return (1, 0, a)
+            return 1, 0, a
         x, y, d = self.extended_euclid(b, a % b)
         print("{} = gcd({}, {}) and {}*{} + {}*{} = {}".format(d, a, b, a, x, b, y, d))
-        return (y, x - ((a / b) * y), d)
+        return y, x - ((a / b) * y), d
 
 
 class ByteUtils:
-    def bitCount(self, int_type):
+    def bit_count(self, int_type):
         count = 0
         while int_type:
             int_type &= int_type - 1
@@ -21,11 +21,11 @@ class ByteUtils:
         print("BITCOUNT: {}".format(count))
         return count
 
-    def getMSBOfN(self, n):
+    def get_msb(self, n):
         msb = (2 ** int(math.log(n, 2)))
         # print("MSB of {} is {}".format(bin(n), msb))
         return msb
 
-    def clearKBitOfN(self, k, n):
+    def clear_k_bit(self, k, n):
         return (n & (~(1 << (k - 1))))
 
