@@ -9,13 +9,13 @@ state_mat_hex = [
     [0xdf, 0xf4, 0xad, 0xbe],
 ]
 state_mat_int = np.array([
-    [0, 1, 2, 3],
+    [1, 1, 2, 3],
     [4, 5, 6, 7],
     [8, 9, 10, 11],
     [12, 13, 14, 15],
 ])
 
-state_mat_int_col1 = np.array([[0, 4, 8, 12]])
+state_mat_int_col1 = np.array([[1, 4, 8, 12]])
 
 def test_mix_columns():
     t.mix_columns(state_mat_int)
