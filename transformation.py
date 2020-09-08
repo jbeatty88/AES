@@ -18,30 +18,28 @@ class AESTransform:
     def shift_rows(self):
         pass
 
-    def mix_columns(self, s):
+    def mix_columns(self, s: list):
         # Operate on the State <s> col-by-col
         # Treat each col as a four-term polynomial
         # Col is considered as polynomials over GF(2^8) and multiplied modulo x^4 + 1 with a(x)
         for col in range(4):
-            self.mix_column(s[:, col])  # Calculate value for each element in col
-            # Apply that back to the original state array
-        pass
+            # Calculate value for each element in s column and return s' column
+            s_col = s[:, col]
+            s_p_col = self.mix_column(s_col)
+            # Replace s column with s' column
+            s[:, col] = s_p_col
 
-    def mix_column(self, col):
-        byte = []
+    def mix_column(self, col: list):
+        bytes = []
         # Unpack the state column values
         s0, s1, s2, s3 = col[0]
-        # s0, s1, s2, s3 = map(int, col[0])
-        print(s0)
-        print(s1)
-        print(s2)
-        print(s3)
+
         # We need to calculate each element in col using all elements in col
         for i in range(4):
             # s'(x) = a(x) x s(x)
             a0, a1, a2, a3 = self.ax[i]
             # a0, a1, a2, a3 = map(int, self.ax[i])
-            byte.append(
+            bytes.append(
                 ff.add(
                     ff.add(
                         ff.multiply(s0, a0),
@@ -53,8 +51,7 @@ class AESTransform:
                     )
                 )
             )
-        print(byte)
-        return byte
+        return bytes
 
     def add_round_key(self):
         pass
