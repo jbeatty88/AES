@@ -21,11 +21,17 @@ class ByteUtils:
         print("BITCOUNT: {}".format(count))
         return count
 
-    def get_msb(self, n):
+    def get_msb(self, n:int) -> int:
         msb = (2 ** int(math.log(n, 2)))
         # print("MSB of {} is {}".format(bin(n), msb))
         return msb
 
     def clear_k_bit(self, k, n):
         return (n & (~(1 << (k - 1))))
+
+    def kth_bit_set(self, k, n):
+        if n & (1 << k):
+            return True
+        else:
+            return False
 
