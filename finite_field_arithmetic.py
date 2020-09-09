@@ -105,8 +105,18 @@ class AESFiniteField:
         return product
 
     def make_xtime_table(self, f1: int, f2: int) -> list:
+        """Creates a table of xtime results.
+
+        When multiplying by higher powers of x, the product is found by
+        adding together intermediate xtime results.
+
+        :param f1: factor
+        :param f2: factor
+        :return: a list of xtime results
+        """
+
         # Xtime table will have 8 elements, corresponding with 8 bits
-        xtime_table = [0] * 8
+        xtime_table = [0] * 63
         # First element is f1 multiplicand
         xtime_table[0] = f1
         p = f1
@@ -124,4 +134,3 @@ class AESFiniteField:
             f2 >>= 1
         # Return the xtime table
         return xtime_table
-
