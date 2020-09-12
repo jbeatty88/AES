@@ -1,5 +1,5 @@
-from utils import ArithmeticUtils
-u = ArithmeticUtils()
-def test_extended_euclid():
-    x, y, d = u.extended_euclid(25, 11)
-    print("{} = gcd(a, b) and a*{} + b*{} = {}".format(d, x, y, d))
+from utils import bit_count
+
+def test_bit_count():
+    assert(bit_count(0xae) == 5)
+    assert(bit_count(0xf7) == 7)
