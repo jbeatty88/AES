@@ -1,0 +1,26 @@
+HOW TO COMPILE AND RUN THE CODE:
+    1. Open up a terminal.
+    2. Use Python3 to run:
+    3. Two option of input:
+        a. Command line arguments: # Case insensitive
+            >> python3 main.py <msg> <key> <e|encrypt|d|decrypt>
+            ex:
+            >> python3 main.py 00112233445566778899aabbccddeeff 000102030405060708090a0b0c0d0e0f1011121314151617 e
+        b. Prompt:
+            >> python3 main.py
+            Please input message --> <msg>
+            Please input key --> <key>
+            Encrypt or decrypt? <e|encrypt|d|decrypt>
+            ex:
+            >> python3 main.py
+            Please input message --> 00112233445566778899aabbccddeeff
+            Please input key --> 000102030405060708090a0b0c0d0e0f1011121314151617
+            Encrypt or decrypt? e
+
+
+PENALTY:
+- I used additional material. I used YouTube videos as well as source code for PyFinite module to work on ff_multiply.
+  My finite field multiply bug was a huge roadblock.
+
+TEST CASES:
+- Pass all of the Appendix C test cases.
